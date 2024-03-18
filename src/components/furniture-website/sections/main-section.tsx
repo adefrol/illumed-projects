@@ -20,7 +20,7 @@ export const MainSection = () => {
           </Button>
 
           <Button
-            className="rounded-full font-montserrat-alternates text-black text-[20px] font-normal"
+            className="rounded-full font-montserrat-alternates text-white text-[20px] font-normal"
             style={{ backgroundColor: "transparent" }}
             size={"lg"}
             variant={"outline"}
