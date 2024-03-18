@@ -4,7 +4,7 @@ import { LinkProps } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 import { ShoppingCart } from "lucide-react";
 
-const navbar = [
+export const navbar = [
   {
     id: 1,
     title: "Главная",
@@ -43,7 +43,7 @@ export const Header: FC = () => {
     <div className="flex items-center justify-between">
       <Logo />
 
-      <div className="flex items-center gap-[35px]">
+      <div className="flex items-center gap-[35px] font-montserrat-alternates">
         {navbar.map((nav) => (
           <div
             onClick={() => setFocus(nav.title)}

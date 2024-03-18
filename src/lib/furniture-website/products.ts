@@ -11,14 +11,14 @@ export const products: IProduct[] = [
 
   {
     id: 2,
-    title: "",
+    title: "Kruzo Aero Chair",
     price: 78,
     img: imagesFurniture.product2,
   },
 
   {
     id: 3,
-    title: "",
+    title: "Ergonomic Chair",
     price: 88,
     img: imagesFurniture.product3,
   },

@@ -6,26 +6,26 @@ export const MainSection = () => {
   return (
     <div className="flex items-center justify-between">
       <div className="">
-        <p className="max-w-[540px] text-[55px] font-DM text-white drop-shadow-title shadow-black">
-          "Transform your space with elegance."
+        <p className="max-w-[540px] text-[55px] font- text-white drop-shadow-title shadow-black font-montserrat-alternates">
+          «Преобразуйте свое пространство элегантно».
         </p>
 
         <div className="flex items-center gap-[25px] mt-[70px]">
           <Button
-            className="rounded-full text-black text-[20px] font-normal"
+            className="rounded-full font-montserrat-alternates text-black text-[20px] font-normal"
             style={{ backgroundColor: colors.yellow }}
             size={"lg"}
           >
-            Shop Now
+            Купить сейчас
           </Button>
 
           <Button
-            className="rounded-full text-black text-[20px] font-normal"
+            className="rounded-full font-montserrat-alternates text-black text-[20px] font-normal"
             style={{ backgroundColor: "transparent" }}
             size={"lg"}
             variant={"outline"}
           >
-            Explore
+            Подробнее
           </Button>
         </div>
       </div>

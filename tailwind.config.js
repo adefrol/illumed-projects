@@ -19,7 +19,7 @@ module.exports = {
     fontFamily: {
       montserrat: "Montserrat",
       "montserrat-alternates": ["Montserrat Alternates"],
-      "unbounded" : "Unbounded",
+      "unbounded": "Unbounded",
       "DM": ["DM Serif Text", "serif"],
       'poppins': ['Poppins', 'sans-serif']
     },
