@@ -11,10 +11,22 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as ProteinWebsiteIndexImport } from './routes/protein-website/index'
+import { Route as HestechMobileIndexImport } from './routes/hestech-mobile/index'
 import { Route as FurnitureWebsiteIndexImport } from './routes/furniture-website/index'
 import { Route as CourseWebsiteIndexImport } from './routes/course-website/index'
 
 // Create/Update Routes
+
+const ProteinWebsiteIndexRoute = ProteinWebsiteIndexImport.update({
+  path: '/protein-website/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const HestechMobileIndexRoute = HestechMobileIndexImport.update({
+  path: '/hestech-mobile/',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const FurnitureWebsiteIndexRoute = FurnitureWebsiteIndexImport.update({
   path: '/furniture-website/',
@@ -38,6 +50,14 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FurnitureWebsiteIndexImport
       parentRoute: typeof rootRoute
     }
+    '/hestech-mobile/': {
+      preLoaderRoute: typeof HestechMobileIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/protein-website/': {
+      preLoaderRoute: typeof ProteinWebsiteIndexImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -46,6 +66,8 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren([
   CourseWebsiteIndexRoute,
   FurnitureWebsiteIndexRoute,
+  HestechMobileIndexRoute,
+  ProteinWebsiteIndexRoute,
 ])
 
 /* prettier-ignore-end */
