@@ -27,6 +27,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "src/components/course-website/HeadingBadge.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
