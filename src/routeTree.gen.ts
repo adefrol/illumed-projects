@@ -12,6 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as ProteinWebsiteIndexImport } from './routes/protein-website/index'
+import { Route as MedicalWebsiteIndexImport } from './routes/medical-website/index'
 import { Route as HestechMobileIndexImport } from './routes/hestech-mobile/index'
 import { Route as FurnitureWebsiteIndexImport } from './routes/furniture-website/index'
 import { Route as CourseWebsiteIndexImport } from './routes/course-website/index'
@@ -20,6 +21,11 @@ import { Route as CourseWebsiteIndexImport } from './routes/course-website/index
 
 const ProteinWebsiteIndexRoute = ProteinWebsiteIndexImport.update({
   path: '/protein-website/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const MedicalWebsiteIndexRoute = MedicalWebsiteIndexImport.update({
+  path: '/medical-website/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -54,6 +60,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HestechMobileIndexImport
       parentRoute: typeof rootRoute
     }
+    '/medical-website/': {
+      preLoaderRoute: typeof MedicalWebsiteIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/protein-website/': {
       preLoaderRoute: typeof ProteinWebsiteIndexImport
       parentRoute: typeof rootRoute
@@ -67,6 +77,7 @@ export const routeTree = rootRoute.addChildren([
   CourseWebsiteIndexRoute,
   FurnitureWebsiteIndexRoute,
   HestechMobileIndexRoute,
+  MedicalWebsiteIndexRoute,
   ProteinWebsiteIndexRoute,
 ])
 
